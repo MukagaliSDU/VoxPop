@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VoxPop</title>
+</head>
+<body>
+    <div>
+        <form action="/comments/new" method="post">
+        <label for="positive">Positive:</label>
+        <input type="radio" id="positive" name="categories" value="negative"><br>
+        <label for="negative">Negative:</label>
+        <input type="radio" id="negative" name="categories"  value="positive"><br>
+
+        <label for="message">Your comment:</label>
+        <textarea id="message" name="comment" required placeholder="write anything which you want"></textarea><br>
+        <input type="submit" value="add">
+    </form>
+    </div>
+</body>
+</html>

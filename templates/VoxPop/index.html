@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Comments</title>
+</head>
+<body>
+    <a href="/">VoxPop</a><br>
+    <a href="/comments/new">add comment</a><br>
+    <form action="/comments" method="get">
+         search:<input type="text" name="q" placeholder="search comment" value="{{q}}">
+    </form>
+    <br>
+    {% for i in comments %}
+        <p>{{i.categories}}</p>
+        <p>{{i.text}}</p><br><br>
+    {% endfor%}
+    {% for page in pages %}
+        <a href="/comments?q={{q}}&page={{page}}&limit={{limit}}">{{page}}</a>
+    {% endfor %}
+</body>
+</html>
